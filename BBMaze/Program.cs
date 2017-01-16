@@ -1,6 +1,7 @@
 ﻿using System;
 using BBMaze.Loaders;
 using BBMaze.Reporters;
+using BBMaze.Solvers;
 
 namespace BBMaze
 {

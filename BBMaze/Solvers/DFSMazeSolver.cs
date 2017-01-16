@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using BBMaze.Interfaces;
 using BBMaze.Model;
-using BBMaze.Solvers;
 
-namespace BBMaze
+namespace BBMaze.Solvers
 {
     /// <summary>
     /// Solves maze using DFS algorithm
@@ -11,10 +10,17 @@ namespace BBMaze
     public class DFSMazeSolver : MazeSolver
     {
         //----------------------------------------------------------------------------------------
+        // Variables Declaration
+        //----------------------------------------------------------------------------------------
+        private readonly Dictionary<MazeNode, MazeNode> _pathMap;
+
+
+        //----------------------------------------------------------------------------------------
         // Constructors
         //----------------------------------------------------------------------------------------
         public DFSMazeSolver(IMazeLoader mazeLoader, IMazeReporter reporter) : base(mazeLoader, reporter)
         {
+            _pathMap = new Dictionary<MazeNode, MazeNode>();
         }
 
 
@@ -23,8 +29,6 @@ namespace BBMaze
         //----------------------------------------------------------------------------------------
         public override int SolveInternal()
         {
-            var pathMap = new Dictionary<MazeNode, MazeNode>();
-
             var stack = new Stack<MazeNode>();
             stack.Push(_mazeLoader.Entrance);
 
@@ -35,7 +39,7 @@ namespace BBMaze
 
                 if (_mazeLoader.Exit.Contains(lastPos))
                 {
-                    _reporter.ReportSolution(pathMap, lastPos);
+                    _reporter.ReportSolution(_pathMap, lastPos);
                     return _reporter.Steps;
                 }
 
@@ -48,7 +52,7 @@ namespace BBMaze
                     _reporter.MarkVisited(neighbor.Row, neighbor.Col);
 
                     stack.Push(neighbor);
-                    pathMap[neighbor] = lastPos;
+                    _pathMap[neighbor] = lastPos;
                 }
 
                 _reporter.ReportStep();
