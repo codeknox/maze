@@ -5,6 +5,23 @@ VisualStudioVersion = 15.0.26020.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBMaze", "BBMaze\BBMaze.csproj", "{D131C503-17C4-404F-AACB-B1F56136973B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBMaze.Tests", "BBMaze.Tests\BBMaze.Tests.csproj", "{62E686E9-4D5C-4E69-BAB8-B2700B0BDA9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{3BF0A25E-EE7B-4CB0-BD70-4C6CFFF4FF16}"
+	ProjectSection(SolutionItems) = preProject
+		samples\maze1.png = samples\maze1.png
+		samples\maze2.png = samples\maze2.png
+		samples\maze3.png = samples\maze3.png
+		samples\TestCase1.png = samples\TestCase1.png
+		samples\TestCase2.png = samples\TestCase2.png
+		samples\TestCase3.png = samples\TestCase3.png
+		samples\TestCase4.png = samples\TestCase4.png
+		samples\TestCase5.png = samples\TestCase5.png
+		samples\TestCase6.gif = samples\TestCase6.gif
+		samples\TestCase6.png = samples\TestCase6.png
+		samples\TestCase7.jpg = samples\TestCase7.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +32,10 @@ Global
 		{D131C503-17C4-404F-AACB-B1F56136973B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D131C503-17C4-404F-AACB-B1F56136973B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D131C503-17C4-404F-AACB-B1F56136973B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62E686E9-4D5C-4E69-BAB8-B2700B0BDA9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62E686E9-4D5C-4E69-BAB8-B2700B0BDA9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62E686E9-4D5C-4E69-BAB8-B2700B0BDA9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62E686E9-4D5C-4E69-BAB8-B2700B0BDA9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

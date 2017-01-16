@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,8 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BBConstants.cs" />
+    <Compile Include="BBMaze.cs" />
+    <Compile Include="Solvers\DFSMazeSolver.cs" />
+    <Compile Include="enums.cs" />
+    <Compile Include="Interfaces\IMazeLoader.cs" />
+    <Compile Include="Interfaces\IMazeReporter.cs" />
+    <Compile Include="Interfaces\IMazeSolver.cs" />
+    <Compile Include="Loaders\MazeLoader.cs" />
+    <Compile Include="Model\MazeNode.cs" />
+    <Compile Include="Reporters\FullMazeStateReporter.cs" />
+    <Compile Include="Solvers\BFSMazeSolver.cs" />
+    <Compile Include="Solvers\MazeSolver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporters\VoidReporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
