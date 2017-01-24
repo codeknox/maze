@@ -58,3 +58,6 @@ namespace BBMaze
         }
     }
 }
+
+// generating movies
+// ffmpeg -f image2 -framerate 60 -i TestCase6solved.%06d.png -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" -c:v libx264 -pix_fmt yuv420p ..\TestCase6solved_BFS_path.mp4
